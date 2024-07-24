@@ -1,0 +1,179 @@
+{%extends "nav-footer.html"%}
+{%block content%}
+<main class="main-content">
+  <section class="content-wrapper">
+    <div class="content-wrapper-inner">
+      <div class="title-parent4">
+        <h1 class="title57">About Us</h1>
+        <div class="description-wrapper">
+          <div class="description6">Who we are!</div>
+        </div>
+      </div>
+    </div>
+    <div class="welcome-message-wrapper-wrapper">
+      <div class="welcome-message-wrapper">
+        <div class="welcome-to-medical-pharmacovig-wrapper">
+          <h1 class="welcome-to-medical-container">
+            <p class="blank-line">&nbsp;</p>
+            <p class="welcome-to-medical">WELCOME TO MEDICAL</p>
+            <p class="pharmacovigilance-reporting-sy">
+              Pharmacovigilance Reporting System
+            </p>
+          </h1>
+        </div>
+        <div class="this-project-aims-container">
+          <p class="blank-line1">
+            <span>
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="blank-line2">
+            <span>
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="this-project-aims">
+            This project aims to design and implement a comprehensive and
+            user-friendly website for healthcare professionals and
+            patients to report adverse drug reactions (ADRs) and
+            medication errors.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="project-details">
+      <div class="details-wrapper">
+        <div class="focus-icon-parent">
+          <div class="focus-icon">
+            <img class="critical-thinking-icon" loading="lazy" alt="" src="./public/critical-thinking@2x.png" />
+          </div>
+          <div class="problem-this-project-container">
+            <p class="problem-this-project">
+              Problem this project is Intended to Solve
+            </p>
+            <p class="blank-line3">&nbsp;</p>
+            <p class="the-primary-problem">
+              The primary problem this pharmacovigilance reporting system
+              aims to address is the inefficiency and inaccuracy in the
+              current processes of reporting adverse drug reactions (ADRs)
+              and medication errors. Traditional methods often involve
+              cumbersome paperwork, lack of standardization, and delayed
+              reporting, which can hinder timely detection of drug safety
+              issues. Additionally, existing systems may not provide
+              sufficient confidentiality options, discouraging healthcare
+              professionals and patients from reporting sensitive
+              information. There is also a gap in integrating preclinical
+              safety data with clinical reports, which can limit the
+              comprehensiveness of pharmacovigilance efforts.
+            </p>
+          </div>
+        </div>
+        <div class="audience-icon-parent">
+          <div class="audience-icon">
+            <img class="add-icon" loading="lazy" alt="" src="./public/add@2x.png" />
+          </div>
+          <div class="who-the-portfolio-container">
+            <p class="who-the-portfolio-project-will">
+              <span>
+                <span>Who the Portfolio Project Will Help and/or Who the
+                  Users Will Be</span>
+              </span>
+            </p>
+            <p class="blank-line4">
+              <span>
+                <span>&nbsp;</span>
+              </span>
+            </p>
+            <p class="blank-line5">&nbsp;</p>
+            <p class="healthcare-professionals-doct">
+              Healthcare Professionals: Doctors, nurses, and pharmacists
+              who need an efficient and user-friendly platform to report
+              ADRs and medication errors quickly and accurately.
+            </p>
+            <p class="blank-line6">&nbsp;</p>
+            <p class="patients-individuals-who">
+              Patients: Individuals who experience adverse drug reactions
+              and want a straightforward way to report these incidents
+              while ensuring their privacy.
+            </p>
+            <p class="blank-line7">&nbsp;</p>
+            <p class="pharmacovigilance-experts-and">
+              Pharmacovigilance Experts and Researchers: Professionals
+              involved in monitoring drug safety who will benefit from
+              access to a comprehensive and real-time database of reported
+              incidents and preclinical safety data.
+            </p>
+            <p class="blank-line8">&nbsp;</p>
+            <p class="regulatory-agencies-organisat">
+              Regulatory Agencies: Organisations responsible for drug
+              safety oversight that require timely and accurate data to
+              make informed decisions.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="limitations-icon-parent">
+        <div class="limitations-icon">
+          <img class="cancel-icon" loading="lazy" alt="" src="./public/cancel@2x.png" />
+        </div>
+        <div class="problem-this-project-container1">
+          <p class="problem-this-project-will-not">
+            <span>
+              <span>Problem this project will not Solve</span>
+            </span>
+          </p>
+          <p class="blank-line9">
+            <span>
+              <span>&nbsp;</span>
+            </span>
+          </p>
+          <p class="regulatory-approval-processes">
+            Regulatory Approval Processes: This project will not address
+            the complexities and procedures involved in obtaining
+            regulatory approvals for new drugs or changes to existing drug
+            protocols.
+          </p>
+          <p class="clinical-trial-management">
+            Clinical Trial Management: It will not encompass the
+            management or conduct of clinical trials but will focus solely
+            on post-marketing surveillance.
+          </p>
+          <p class="global-implementation-challeng">
+            Global Implementation Challenges: While the system is designed
+            to be scalable, it will not directly tackle global
+            implementation challenges, such as differing regulatory
+            requirements across countries.
+          </p>
+          <p class="education-and-training">
+            Education and Training: The project will not directly provide
+            extensive training programs for users, though it may offer
+            basic guidelines and support for using the system.
+          </p>
+          <p class="blank-line10">&nbsp;</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<img class="about-us-child" loading="lazy" alt="" src="./public/rectangle-4139@2x.png" />
+</div>
+
+<script>
+  var tabText = document.getElementById("tabText");
+  if (tabText) {
+    tabText.addEventListener("click", function () {
+      var anchor = document.querySelector("[data-scroll-to='sectionContainer']");
+      if (anchor) {
+        anchor.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+    });
+  }
+
+  var blogTabText = document.getElementById("blogTabText");
+  if (blogTabText) {
+    blogTabText.addEventListener("click", function (e) {
+      window.location.href = "./blog-page.html";
+    });
+  }
+</script>
+{%endblock%}
