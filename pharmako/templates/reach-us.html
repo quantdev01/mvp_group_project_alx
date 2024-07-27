@@ -1,32 +1,17 @@
 {%extends "nav-footer.html"%}
 {%block content%}
 <div class="reach-us">
-  <header class="top-bar5">
-    <a class="title82">Pharmacovigilance Reporting Platform</a>
-    <div class="navigation5">
-      <a class="tab22" id="tabText">Home</a>
-      <a class="tab23">Report ADR</a>
-      <a class="tab24">Report Medication Error</a>
-      <a class="blog-tab5" id="blogTabText">Blog</a>
-      <a class="tab25">About us</a>
-      <div class="textfield10">
-        <input class="text11" placeholder="Search in site" type="text" />
-
-        <img class="ic-search-icon5" alt="" src="./public/icsearch.svg" />
-      </div>
-    </div>
-  </header>
   <main class="main-content1">
     <div class="main-content-child"></div>
     <section class="content-left">
       <div class="envelope-parent">
-        <img class="envelope-icon" loading="lazy" alt="" src="./public/envelope@2x.png" id="envelopeImage" />
+        <img class="envelope-icon" loading="lazy" alt="" src="{{url_for('static', filename='public/envelope@2x.png')}}" id="envelopeImage" />
 
-        <img class="help-icon" loading="lazy" alt="" src="./public/help@2x.png" />
+        <img class="help-icon" loading="lazy" alt="" src="{{url_for('static', filename='public/help@2x.png')}}" />
       </div>
       <div class="content-left-inner">
         <div class="hi-precious-parent">
-          <h1 class="hi-precious">Hi PRECIOUS 👋</h1>
+          <h1 class="hi-precious">Hi {{session.username}} 👋</h1>
           <h1 class="how-can-we">How can we help?</h1>
         </div>
       </div>

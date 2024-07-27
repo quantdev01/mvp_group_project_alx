@@ -81,6 +81,7 @@ def signup():
 		account = cursor.fetchone()
 		if account:
 			msg = 'Account already exists !'
+			return render_template('login.html')
 		elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
 			msg = 'Invalid email address !'
 		elif not re.match(r'[A-Za-z0-9]+', username):
@@ -93,6 +94,7 @@ def signup():
 
 			mysql.connection.commit()
 			msg = 'You have successfully registered !'
+			return render_template('login.html')
 	elif request.method == 'POST':
 		msg = 'Please fill out the form !'
 	return render_template('signup.html', msg=msg)
