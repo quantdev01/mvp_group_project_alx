@@ -44,7 +44,7 @@ def login():
 			session['id'] = account['id']
 			session['username'] = account['username']
 			msg = 'Logged in successfully !'
-			return render_template('messages.html')
+			return render_template('reach-us.html')
 		else:
 			msg = 'Incorrect username / password !'
 	return render_template('login.html', msg=msg)

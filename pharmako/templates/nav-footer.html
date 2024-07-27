@@ -5,6 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{url_for('static', filename='css/global.css')}}" />
         <link rel="stylesheet" href="{{url_for('static', filename='css/nav-footer.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/about-us.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/blog-page.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/messages.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/product-view.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/reach-view.css')}}" />
+        <link rel="stylesheet" href="{{url_for('static', filename='css/about-us.css')}}" />
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Open Sans:wght@400;600;700&display=swap"
@@ -17,10 +23,10 @@
             <h2 class="title">Pharmacovigilance Reporting Platform</h2>
             <div class="navigation" id="navbarLinks">
               
-              <a class="tab" id="tabText"><span class="tab-home">Home</span></a>
-              <a class="tab1" id="tabText1"><span class="tab-report">Report Drug Effect</span></a>
-              <a class="blog-tab" id="blogTabText"><span class="tab-blog">Blog</span></a>
-              <a class="tab3" id="tabText3"><span class="tab-about">About us</span></a>
+              <a class="tab" id="tabText" href="landing_page"><span class="tab-home">Home</span></a>
+              <a class="tab1" id="tabText1" href="signup"><span class="tab-report">Report Drug Effect</span></a>
+              <a class="blog-tab" id="blogTabText" href="blog_page"><span class="tab-blog">Blog</span></a>
+              <a class="tab3" id="tabText3" href="about_us"><span class="tab-about">About us</span></a>
               <div class="textfield">
                 <input class="text" placeholder="Search in site" type="text" />
                 <img class="ic-search-icon" alt="" src="{{url_for('static', filename='/public/icsearch.svg')}}" />

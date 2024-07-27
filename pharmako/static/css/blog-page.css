@@ -190,7 +190,7 @@
   justify-content: flex-start;
   padding: var(--padding-123xl) var(--padding-base) var(--padding-5xs);
   gap: var(--gap-111xl);
-  background-image: url(./public/image1@3x.png);
+  background-image: url('../public/image1@3x.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -335,7 +335,7 @@
   justify-content: flex-start;
   padding: var(--padding-123xl) var(--padding-base) var(--padding-5xs);
   gap: var(--gap-111xl);
-  background-image: url(./public/image1@3x.png);
+  background-image: url('../public/image1@3x.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -490,7 +490,7 @@
   justify-content: flex-start;
   padding: var(--padding-123xl) var(--padding-base) var(--padding-5xs);
   gap: var(--gap-111xl);
-  background-image: url(./public/image1@3x.png);
+  background-image: url('../public/image1@3x.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -635,7 +635,7 @@
   justify-content: flex-start;
   padding: var(--padding-123xl) var(--padding-base) var(--padding-5xs);
   gap: var(--gap-111xl);
-  background-image: url(./public/image1@3x.png);
+  background-image: url('../public/image1@3x.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
