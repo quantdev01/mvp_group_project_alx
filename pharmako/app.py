@@ -89,6 +89,7 @@ def signup():
 		elif not username or not password or not email:
 			msg = 'Please fill out the form !'
 		else:
+			# test
 			# cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s, % s)', (username, password, email, age, ))
 			cursor.execute('INSERT INTO accounts (username, password, email, age) VALUES (%s, %s, %s, %s)', (username, password, email, age))
 
