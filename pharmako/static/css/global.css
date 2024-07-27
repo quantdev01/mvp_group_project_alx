@@ -3,6 +3,11 @@ body {
   line-height: normal;
 }
 
+.logo{
+  height: 60px;
+  width: 60px;
+}
+
 :root {
   /* fonts */
   --font-open-sans: "Open Sans";
