@@ -70,7 +70,7 @@ def signup():
 		confirm_password = request.form['confirm_password']
 		email = request.form['email']
 		age = request.form['age']
-
+		# print('Yes it works')
 		# validating the password
 		if (password != confirm_password):
 			msg = 'Passwords do not match!'
@@ -99,3 +99,6 @@ def signup():
 	elif request.method == 'POST':
 		msg = 'Please fill out the form !'
 	return render_template('signup.html', msg=msg)
+
+if __name__ == "__main__":
+	app.run()
