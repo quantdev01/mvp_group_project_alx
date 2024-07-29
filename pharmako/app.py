@@ -4,6 +4,7 @@ from flask import Flask, render_template, request, redirect, url_for, session
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
+from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
@@ -36,10 +37,11 @@ def login():
 	if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
 		username = request.form['username']
 		password = request.form['password']
+
 		cursor = mysql.connection.cursor(MySQLdb.cursors.DictCursor)
 		cursor.execute('SELECT * FROM accounts WHERE username = % s AND password = % s', (username, password, ))
 		account = cursor.fetchone()
-		if account:
+		if account and check_password_hash(account['password'], password):
 			session['loggedin'] = True
 			session['id'] = account['id']
 			session['username'] = account['username']
@@ -70,8 +72,7 @@ def signup():
 		confirm_password = request.form['confirm_password']
 		email = request.form['email']
 		age = request.form['age']
-		# print('Yes it works')
-		# validating the password
+
 		if (password != confirm_password):
 			msg = 'Passwords do not match!'
 			return render_template('signup.html', msg=msg)
@@ -90,8 +91,8 @@ def signup():
 			msg = 'Please fill out the form !'
 		else:
 			# test
-			# cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s, % s)', (username, password, email, age, ))
-			cursor.execute('INSERT INTO accounts (username, password, email, age) VALUES (%s, %s, %s, %s)', (username, password, email, age))
+			hashed_password = generate_password_hash(password, method='pbkdf2:sha256')
+			cursor.execute('INSERT INTO accounts (username, password, email, age) VALUES (%s, %s, %s, %s)', (username, hashed_password, email, age))
 
 			mysql.connection.commit()
 			msg = 'You have successfully registered !'
